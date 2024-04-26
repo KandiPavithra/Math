@@ -1,0 +1,13 @@
+import math
+
+def newtons_law_of_cooling(initial_temp, ambient_temp, cooling_constant, time):
+    return ambient_temp + (initial_temp - ambient_temp) * math.exp(-cooling_constant * time)
+
+# Example usage:
+initial_temp = 100  # Initial temperature of the object
+ambient_temp = 25  # Ambient temperature
+cooling_constant = 0.1  # Cooling constant specific to the object and medium
+time = 10  # Time elapsed
+
+result = newtons_law_of_cooling(initial_temp, ambient_temp, cooling_constant, time)
+print("Final temperature after {} minutes: {:.2f}°C".format(time, result))
